@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36119.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{C46C61A1-6ABB-4C8B-B090-57F5A6515994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{A7B7CD2C-64BF-49BA-90EA-2BF0CB586FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{4BC4EF51-AD68-487D-A2DF-9F8B139938AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C46C61A1-6ABB-4C8B-B090-57F5A6515994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46C61A1-6ABB-4C8B-B090-57F5A6515994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46C61A1-6ABB-4C8B-B090-57F5A6515994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46C61A1-6ABB-4C8B-B090-57F5A6515994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B7CD2C-64BF-49BA-90EA-2BF0CB586FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B7CD2C-64BF-49BA-90EA-2BF0CB586FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B7CD2C-64BF-49BA-90EA-2BF0CB586FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B7CD2C-64BF-49BA-90EA-2BF0CB586FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC4EF51-AD68-487D-A2DF-9F8B139938AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC4EF51-AD68-487D-A2DF-9F8B139938AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC4EF51-AD68-487D-A2DF-9F8B139938AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC4EF51-AD68-487D-A2DF-9F8B139938AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {565AE5E8-28A0-4858-96B7-E5B23B518F2B}
+	EndGlobalSection
+EndGlobal
