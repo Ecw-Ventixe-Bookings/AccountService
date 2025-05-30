@@ -58,17 +58,17 @@ app.UseAuthorization();
 
 #region || Endpoints
 
-app.MapPost("/account", async (AccountDto dto, IAccountService service) =>
-{
-    if (dto is null || dto.Id == Guid.Empty)
-        return Results.BadRequest("Bad Payload");
+//app.MapPost("/account", async (AccountDto dto, IAccountService service) =>
+//{
+//    if (dto is null || dto.Id == Guid.Empty)
+//        return Results.BadRequest("Bad Payload");
 
-    var result = await service.CreateAccountAsync(dto);
+//    var result = await service.CreateAccountAsync(dto);
 
-    return result.Success
-        ? Results.Ok(result)
-        : Results.BadRequest(result);
-});
+//    return result.Success
+//        ? Results.Ok(result)
+//        : Results.BadRequest(result);
+//});
 
 
 app.MapGet("/account/{id}", async (Guid id, IAccountService service) =>
@@ -78,7 +78,7 @@ app.MapGet("/account/{id}", async (Guid id, IAccountService service) =>
     return result.Success
         ? Results.Ok(result)
         : Results.BadRequest(result);
-});
+}).RequireAuthorization();
 
 
 // For later
