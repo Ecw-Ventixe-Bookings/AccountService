@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Scalar.AspNetCore;
 using Service.Interfaces;
 using Service.Models;
 using Service.Services;
@@ -49,6 +50,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 var app = builder.Build();
 #region || App Configurations
 app.MapOpenApi();
+app.MapScalarApiReference("/api/docs");
 app.UseHttpsRedirection();
 
 app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
@@ -57,20 +59,6 @@ app.UseAuthorization();
 #endregion
 
 #region || Endpoints
-
-//app.MapPost("/account", async (AccountDto dto, IAccountService service) =>
-//{
-//    if (dto is null || dto.Id == Guid.Empty)
-//        return Results.BadRequest("Bad Payload");
-
-//    var result = await service.CreateAccountAsync(dto);
-
-//    return result.Success
-//        ? Results.Ok(result)
-//        : Results.BadRequest(result);
-//});
-
-
 app.MapGet("/account/{id}", async (Guid id, IAccountService service) =>
 {
     var result = await service.GetAccountAsync(id);
